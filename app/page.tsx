@@ -1,5 +1,22 @@
 import Image from "next/image";
-
+import Tiltcard from "./components/Tiltcard";
+const products = [
+  {
+    title: "Fish Oil",
+    desc: "Custom EPA/DHA specs, deodorized, bulk packaging available.",
+    img: "/logo.png",
+  },
+  {
+    title: "Omega-3 Powder",
+    desc: "Plant-based DHA/EPA solutions for EU/NA supplement brands.",
+    img: "/logo.png",
+  },
+  {
+    title: "capsules",
+    desc: "Customized processing for deep-sea derived ingredients and intermediates.",
+    img: "/logo.png",
+  },
+];
 export default function Home() {
   return (
     <div className="relative flex min-h-screen items-center justify-center bg-gradient-to-br from-[#EDECE9] via-[#E2E2E2] to-[#DEDFE0] font-sans dark:bg-black">
@@ -30,7 +47,7 @@ export default function Home() {
                 </a>{" "}
                 or the{" "}
                 <a
-                  href="gujiaming2004@outlook.com"
+                  href="mailto:gujiaming2004@outlook.com"
                   className="font-medium text-zinc-950 dark:text-zinc-50"
                 >
                   Email
@@ -38,9 +55,33 @@ export default function Home() {
               </p>
             </div>
           </section>
-
-          <section className="h-screen snap-start flex items-center justify-center bg-[#DEDFE0] text-[#66ccff]">
-            <h2 className="text-4xl font-semibold">Section 2</h2>
+          <section className="h-screen snap-start flex items-center justify-center bg-[#DEDFE0] text-zinc-600">
+            <div className="w-full max-w-4xl items-center px-6 mx-auto">
+              <h2 className="text-4xl text-center font-semibold">Products</h2>
+                <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  {products.map((product, index) => (
+                    <Tiltcard key={index}>
+                      <div key={index} className="bg-white rounded-lg shadow-md">
+                        <Image
+                          src={product.img}
+                          alt={product.title} 
+                          width={500}
+                          height={500}
+                          className="mt-4 w-full h-auto"
+                        />
+                      </div>
+                    </Tiltcard>
+                  ))}
+                </div>
+              <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {products.map((product, index) => (
+                  <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+                    <h3 className="text-xl font-semibold">{product.title}</h3>
+                    <p className="mt-2 text-gray-700">{product.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </section>
 
           <section className="h-screen snap-start flex items-center justify-center bg-[#DEDFE0] text-[#66ccff]">
