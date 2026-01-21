@@ -1,4 +1,6 @@
+// "use client";
 import Image from "next/image";
+// import React, { useRef } from "react";
 import Tiltcard from "./components/Tiltcard";
 const products = [
   {
@@ -17,7 +19,13 @@ const products = [
     img: "/logo.png",
   },
 ];
+
 export default function Home() {
+  // const scene3Ref = useRef<HTMLElement | null>(null);
+  // const scene4Ref = useRef<HTMLElement | null>(null);
+  // const scene5Ref = useRef<HTMLElement | null>(null);
+
+  // const targets = [scene3Ref, scene4Ref, scene5Ref];
   return (
     <div className="relative flex min-h-screen items-center justify-center bg-gradient-to-br from-[#EDECE9] via-[#E2E2E2] to-[#DEDFE0] font-sans dark:bg-black">
       <main className="flex min-h-screen w-full  flex-col items-center justify-between sm:items-start">
@@ -56,7 +64,7 @@ export default function Home() {
             </div>
           </section>
           <section className="h-screen snap-start flex items-center justify-center bg-[#DEDFE0] text-zinc-600">
-            <div className="w-full max-w-4xl items-center px-6 mx-auto">
+            <div className="w-full max-w-7xl items-center px-6 mx-auto">
               <h2 className="text-4xl text-center font-semibold">Products</h2>
                 <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                   {products.map((product, index) => (
@@ -69,18 +77,19 @@ export default function Home() {
                           height={500}
                           className="mt-4 w-full h-auto"
                         />
+                        <h3 className="text-2xl font-semibold">{product.title}</h3>
+                        <p className="mt-2 text-xl text-gray-700">{product.desc}</p>
                       </div>
                     </Tiltcard>
                   ))}
                 </div>
-              <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {/* <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {products.map((product, index) => (
                   <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                    <h3 className="text-xl font-semibold">{product.title}</h3>
-                    <p className="mt-2 text-gray-700">{product.desc}</p>
+                    
                   </div>
                 ))}
-              </div>
+              </div> */}
             </div>
           </section>
 

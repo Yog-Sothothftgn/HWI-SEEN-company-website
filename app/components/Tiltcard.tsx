@@ -13,7 +13,7 @@ export default function Tiltcard({ children }: { children: React.ReactNode }) {
         const centerY = rect.height / 2;
         const nx = (x - centerX) / centerX;
         const ny = (y - centerY) / centerY;
-        const maxTilt = 12; // degrees
+        const maxTilt = 10; // degrees
         const rx = -ny * maxTilt;
         const ry = nx * maxTilt;
         card.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) scale(1.03)`;
