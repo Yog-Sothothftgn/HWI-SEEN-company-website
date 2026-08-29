@@ -160,7 +160,7 @@ export default function Home() {
                 <circle cx="12" cy="10" r="3"/>
               </svg>
               <span className="text-xs lg:text-base font-medium tracking-wide text-zinc-600">
-                Los Angeles Warehouse · US Domestic Shipping
+                Santa Ana, CA · US Domestic Shipping
               </span>
             </div>
           </section>

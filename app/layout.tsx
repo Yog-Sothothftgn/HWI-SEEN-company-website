@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     "omega-3 wholesale",
     "DHA supplement supplier",
     "EPA supplement supplier",
+    "Santa Ana omega-3",
     "Los Angeles omega-3",
     "US omega-3 distributor",
     "HWI SENN",
