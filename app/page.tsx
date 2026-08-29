@@ -154,14 +154,19 @@ export default function Home() {
             </div>
 
             {/* LA Warehouse Badge */}
-            <div className="absolute bottom-4 right-4 z-10 flex items-center gap-2 lg:gap-4 rounded-full border border-zinc-300 bg-white/70 px-4 lg:px-8 py-2 lg:py-4 shadow-sm backdrop-blur-sm">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 lg:h-6 lg:w-6 shrink-0 text-zinc-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <div className="absolute bottom-4 right-4 z-10 flex items-center gap-2 lg:gap-4 rounded-2xl border border-zinc-300 bg-white/70 px-4 lg:px-6 py-2 lg:py-3 shadow-sm backdrop-blur-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 lg:h-5 lg:w-5 shrink-0 text-zinc-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/>
                 <circle cx="12" cy="10" r="3"/>
               </svg>
-              <span className="text-xs lg:text-base font-medium tracking-wide text-zinc-600">
-                Santa Ana, CA · US Domestic Shipping
-              </span>
+              <div className="flex flex-col">
+                <span className="text-xs lg:text-sm font-semibold tracking-wide text-zinc-700">
+                  Los Angeles Warehouse · US Domestic Shipping
+                </span>
+                <span className="text-xs font-medium text-zinc-400 tracking-wide">
+                  Santa Ana, CA 92705
+                </span>
+              </div>
             </div>
           </section>
 
